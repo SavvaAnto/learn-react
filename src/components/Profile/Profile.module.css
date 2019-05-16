@@ -1,0 +1,15 @@
+.content {
+    grid-area: c;
+    background-color: aqua;
+  }
+  
+  .cover img {
+    width: 100%;
+  }
+  .ava img {
+    width: 20%;
+  }
+
+  .item {
+      color: blue;
+  }

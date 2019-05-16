@@ -1,0 +1,13 @@
+.nav {
+    grid-area: n;
+    background-color: brown;
+}
+
+.item {
+    color: white;
+}
+
+.item.active {
+    font-style: italic;
+    font-stretch: expanded;
+}
