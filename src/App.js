@@ -9,23 +9,6 @@ import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 
-let posts = [
-  {id: 1, message: 'Hi bro', likes: 10},
-  {id: 2, message: 'My second post', likes: 15}
-]
-
-let dialogs = [
-  {id: 1, name: 'Savva'},
-  {id: 2, name: 'Alexey'},
-  {id: 3, name: 'Serega'}
-]
-
-let messages = [
-  {id: 1, message: 'Hi'},
-  {id: 2, message: 'Savva'},
-  {id: 3, message: 'Tensy'}
-]
-
 const App = (props) => {
   return (
     <BrowserRouter>  
@@ -33,8 +16,8 @@ const App = (props) => {
         <Header />
         <Navbar />
         <div className='app-wrapper-content'>
-          <Route path='/dialogs' render={ () => <Dialogs dialogs={dialogs} messages={messages}/>} />
-          <Route path='/profile' render={ () => <Profile posts={posts}/>} />
+          <Route path='/dialogs' render={ () => <Dialogs dialogs={props.appState.dialogs} messages={props.appState. messages}/>} />
+          <Route path='/profile' render={ () => <Profile posts={props.appState.posts}/>} />
           <Route path='/news' component={News} />
           <Route path='/music' component={Music} />
           <Route path='/settings' component={Settings} />
